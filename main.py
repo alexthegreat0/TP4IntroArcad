@@ -5,7 +5,6 @@ SCREEN_HEIGHT = 600
 
 COLORS = []
 
-
 class MyGame(arcade.Window):
    def __init__(self):
        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, "Exercice #1")
@@ -29,4 +28,3 @@ def main():
 
 
 main()
-
