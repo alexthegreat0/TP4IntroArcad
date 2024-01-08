@@ -10,13 +10,13 @@ SCREEN_HEIGHT = 600
 
 COLORS = [arcade.csscolor.RED, arcade.csscolor.BROWN, arcade.csscolor.PINK, arcade.csscolor.BLUE, arcade.csscolor.GREEN, arcade.csscolor.BLACK, arcade.csscolor.ORANGE, arcade.csscolor.YELLOW]
 
-class Boule: #La class, qui va représenter chaque balle 
+class Boule: #La classe, qui va représenter chaque balle 
 
     #La méthode __init__ qui sera appelé une fois pour chaque cercle
     #Elle contient les attributs de la classe Boule
 
     def __init__(self, x, y, chx, chy, rayon, color):
-        print("Boule is initializing. ")
+
         self.cercle_x = x
         self.cercle_y = y
         self.cercle_change_x = chx # Nombre d'unité pour le déplacement sur l'axe des X
@@ -61,7 +61,7 @@ class Rectangle: #La classe qui va représenter chaque rectangle
     #Elle contient les attributs de la classe Rectangle
 
     def __init__(self, x, y, chx, chy, width, height, color):
-        print("Rectangle is initializing. ")
+
         self.rectangle_x = x
         self.rectangle_y = y
         self.rectangle_change_x = chx # Nombre d'unité pour le déplacement sur l'axe des X
@@ -106,7 +106,7 @@ class MyGame(arcade.Window): #La classe qui va controller le jeu au complet et q
     #La méthode __init__ qui sera appelé une fois
 
     def __init__(self):
-        print("MyGame is Initializing. ")
+
         super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, "TP4") #Ouvrir la nouvelle fenêtre avec les bons paramètre
         arcade.set_background_color(arcade.color.SKY_BLUE) #Couleur de l'arrière plan
 
@@ -115,7 +115,7 @@ class MyGame(arcade.Window): #La classe qui va controller le jeu au complet et q
         #À travers le programme, le paramètre self fait référence à une Instance de la classe
         #On commence déja avec une boule qui bouge quand on démarre le programme
 
-        self.clist = [Boule(random.randint(1, 800), random.randint(1, 600), random.randint(-5,5), random.randint(-5,5), random.randint(10,30), random.choice(COLORS))]
+        self.clist = []
 
     def on_draw(self): #La méthode on_draw() qui sera appelée constamment par le arcarde.run()
         arcade.start_render() #Faire apparaitre l'arrière plan et enlever les anciens objets (classes)
